@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySync </title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <style>
+        :root {
+            --primary-color: #6366F1;
+            --accent-color: #3f83f8;
+            --text-color: #333333;
+            --link-color: #2563eb;
+            --background-color: #ffffff;
+            --light-gray: #f0f0f0;
+            --gray: #808080;
+            --dark-gray: #555;
+        }
+
+        .header-content {
+            padding: 0 3rem 0 3rem;
+        }
+
+        .left> :nth-child(1) {
+            color: var(--primary-color);
+        }
+
+        .container_Heading {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1.8rem;
+        }
+
+        .container_Heading span {
+            font-size: 3.5rem;
+            font-weight: 800;
+
+        }
+
+        .container_Content {
+            padding-bottom: 1.8rem;
+
+        }
+
+        .container_Content span {
+            color: var(--dark-gray);
+            /* padding-bottom: 1.8rem; */
+        }
+
+        .btn {
+            color: white;
+
+            padding: 0.7rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        .startBtn {
+            background-color: var(--link-color);
+        }
+
+        .takeTourbtn {
+            background-color: var(--text-color);
+        }
+
+        .container {
+            display: flex;
+            /* border: 3px solid blue ; */
+            padding: 3.5rem;
+            /* gap: 3rem; */
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            padding: 3rem;
+            /* border: 3px solid; */
+            /* gap: ; */
+        }
+
+        .rightImgContainer img {
+            border-radius: 12px;
+
+        }
+
+
+        /* *********** */
+
+        /* hero section */
+        .heroSection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .heroHeading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding-bottom: 1.5rem;
+        }
+
+        .heroCompanyContainer {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--gray);
+            background-color: #d8d7d7;
+            gap: 3.5rem;
+            border-radius: 5px;
+            padding: 1.5rem;
+            /* margin: 1rem; */
+        }
+
+        .company {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            color: #666666;
+
+        }
+
+        .company i {
+            color: var(--dark-gray);
+            /* font-size: 1rem; */
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        /* feature section */
+
+        .featureHeading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .headingContent {
+            text-align: center;
+            color: var(--gray);
+
+        }
+
+        .cardContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 400px));
+
+            /* background-color: #2563eb; */
+            justify-content: center;
+            gap: 1rem;
+
+            color: white;
+            font-weight: 500;
+
+            padding-top: 3rem;
+
+
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 2rem;
+
+            /* background-color: #dd32ff; */
+        }
+
+        .items i {
+            columns: #e0e0e0;
+        }
+
+        .itemHeading {
+            font-weight: 800;
+            font-size: 1.3rem;
+
+        }
+
+        .headingContent {
+            padding: 1rem 13.8rem 1rem 13.8rem;
+            padding: 0rem 20rem;
+        }
+
+
+
+        /* causing error , nthchild should work fine but it isnt */
+
+        /*
+        .cardContainer:nth-child(1)  .items{
+            background-color: #1C0221;
+        }
+
+        .cardContainer:first-child{
+            background-color: #D17B0F;
+
+        }
+        .cardContainer:nth-child(2){
+            background-color: #D17B0F;
+        }
+        .cardContainer:nth-child(3){
+            background-color: #D90368;
+        }
+        .cardContainer:nth-child(1) {
+            background-color: #6610F2;
+        }
+        .cardContainer:nth-child(1){
+            background-color: #ffd230;
+        }
+        */
+
+        .item1 {
+            background-color: #db29ff;
+        }
+
+        .item2 {
+            background-color: #ff9b20;
+        }
+
+        .item3 {
+            background-color: #fd2389;
+        }
+
+        .item4 {
+            background-color: #6610F2;
+        }
+
+        .item5 {
+            background-color: #ffd230;
+        }
+
+        .item6 {
+            background-color: #64f83f;
+        }
+
+        /* .item{
+            background-color: #D17B0F;
+        } */
+
+
+
+        .featureSection {
+            background-color: #d8d7d7;
+            background-color: #e9e8e8;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .itemImg i {
+            background-color: #64f83f;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+
+        <header class="header-content">
+            <div class="nav">
+                <div class="navcon">
+                    <!-- img -->
+
+                    <img src="pen-nib-svgrepo-com.svg" height="50px" alt="">
+                    <span>
+                        <h2>
+                            StudySync
+                        </h2>
+                    </span>
+                </div>
+
+                <ul>
+                    <li><a class="nav-link" href="home.html">Home</a></li>
+                    <li><a class="nav-link" href="study.html">Study</a></li>
+                    <li><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <div class="contact">
+                    <button type="button" href="contact.html" class="btn contactBtn">Contact Us</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class="left">
+            <span>Very Proud To introduce </span>
+            <div class="container_Heading">
+                <span>
+                    Seamless Learning
+                </span>
+                <span>For Brighter Futures</span>
+
+            </div>
+            <div class="container_Content">
+                <span>Our innovative platform offers an effortless and seamless approach to learning, empowering
+                    students of all ages to achieve brighter futures. Join us on a transformative journey to simplify
+                    education and unlock your full potential.</span>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn startBtn">Start Now</button>
+                <button type="button" class="btn takeTourbtn">Take Tour</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="rightImgContainer">
+                <!-- <img src="https://picsum.photos/500" alt=""> -->
+
+                <!-- <div class="container_Heading">
+                    <span>
+                        Seamless Learning
+                    </span>
+                    <span>For Brighter Futures</span>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+    <div class="heroSection">
+        <div class="heroHeading">
+            Trusted By the Best
+        </div>
+        <div class="heroCompanyContainer">
+            <div class="company">
+                <i class="fi fi-brands-meta"></i>
+                <span>Meta </span>
+            </div>
+            <div class="company">
+                <i class="fi fi-brands-instagram"></i>
+                <span>Instagram </span>
+            </div>
+            <div class="company">
+                <i class="fi fi-brands-twitter"></i>
+                <span>Twitter </span>
+            </div>
+            <div class="company">
+                <i class="fi fi-brands-linkedin"></i>
+                <span>LinkedIn</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="featureSection">
+        <div class="featureHeading">
+            <h2>Our Comptetive advantage</h2>
+        </div>
+        <div class="headingContent">
+
+            <span> this is a section of simple filter text aka placeholder text. it shares some characteristics of real
+                written text but is random or otherwise generated.</span>
+        </div>
+
+        <div class="cardContainer">
+
+            <div class="items item1">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    Personalized learning
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+            <div class="items item2">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    <span>
+                        Personalized learning
+                    </span>
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+            <div class="items item3">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    Personalized learning
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+            <div class="items item4">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                    <i class="fi fi-ts-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    Personalized learning
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+            <div class="items item5">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    Personalized learning
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+            <div class="items item6">
+                <div class="itemImg">
+                    <i class="fi fi-rr-lightbulb-on"></i>
+                    <i class="fi fi-tr-lightbulb-on"></i>
+                </div>
+                <div class="itemHeading">
+                    Personalized learning
+                </div>
+                <div class="itemContainer">
+                    Unlocking potential through customized pathways
+                    Empowering students with tailored resources and support
+                    Fostering engagement and growth in every learner
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- <div class="items"></div> -->
+    <!-- <div class="items"> </div> -->
+    </div>
+
+    <div class="testimonialContainer">
+        <div class="testimonialHeading">
+            <span>What Others Say About Us </span>
+        </div>
+
+        <!-- <div class="testimonyFlexContainer"> -->
+        <div class="testimonialCardsContainer">
+            <div class="testiCard">
+                <div class="testimoniContent">
+
+                    <span>"StudySync offers a diverse range of texts that are not only engaging but also aligned
+                        with
+                        the Common Core standards, making it an excellent resource for enhancing students' literacy
+                        skills."</span>
+                </div>
+                <div class="testiAvatar">
+                    <!-- sqaure img ,  -->
+                    <img class="testiAvatar" src="https://i.pravatar.cc/70?img=48" alt="">
+
+                </div>
+
+                <div class="testimoneeContainer">
+                    <div class="testimoneeName">
+                        <span>Sarah Johnson</span>
+                    </div>
+                    <div class="testimoneeJob">
+                        <span>8th Grade English Teacher </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="testiCard">
+                <div class="testimoniContent">
+
+                    <span>"I appreciate how StudySync integrates reading, writing, and speaking into its curriculum,
+                        providing a well-rounded approach to English Language Arts education."</span>
+                </div>
+                <div class="testiAvatar">
+                    <!-- sqaure img ,  -->
+                    <img class="testiAvatar" src="https://i.pravatar.cc/70?img=47" alt="">
+
+                </div>
+
+                <div class="testimoneeContainer">
+                    <div class="testimoneeName">
+                        <span>Sarah Johnson</span>
+                    </div>
+                    <div class="testimoneeJob">
+                        <span>8th Grade English Teacher </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="testiCard">
+                <div class="testimoniContent">
+
+                    <span>"The platform's usability is commendable; it supports teachers in implementing lessons
+                        effectively, allowing for a seamless teaching experience."</span>
+                </div>
+                <div class="testiAvatar">
+                    <!-- sqaure img ,  -->
+                    <img class="testiAvatar" src="https://i.pravatar.cc/70?img=53" alt="">
+
+                </div>
+
+                <div class="testimoneeContainer">
+                    <div class="testimoneeName">
+                        <span>Sarah Johnson</span>
+                    </div>
+                    <div class="testimoneeJob">
+                        <span>8th Grade English Teacher </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--
+
+            <div class="testiCard">
+                <div class="testimoniContent">
+
+                    <span>"The platform's usability is commendable; it supports teachers in implementing lessons
+                        effectively, allowing for a seamless teaching experience."</span>
+                </div>
+                <div class="testiAvatar">
+
+                    <img class="testiAvatar" src="https://i.pravatar.cc/70?img=53" alt="">
+
+                </div>
+
+                <div class="testimoneeContainer">
+                    <div class="testimoneeName">
+                        <span>Sarah Johnson</span>
+                    </div>
+                    <div class="testimoneeJob">
+                        <span>8th Grade English Teacher </span>
+                    </div>
+                </div>
+
+
+            </div>
+            -->
+
+
+        </div>
+        <!-- </div> -->
+    </div>
+
+    <!-- <div class="items"></div> -->
+
+    <!-- form  -->
+
+    <div class="formContainer">
+
+        <div class="formImgContainer">
+            <div class="formImg">
+                <img src="https://picsum.photos/seed/picsum/500/350" alt="">
+            </div>
+        </div>
+
+        <div class="rightContainer">
+
+
+            <div class="form">
+                <div class="form-Heading">
+                    <span>Get the latest updates</span>
+
+                </div>
+                <div class="signUp">
+                    <span>Sign up for newsletter</span>
+                </div>
+
+                <div class="form-Email">
+                    <form action="">
+
+                        <input type="email" name="email" id="email" class="email" placeholder="Email">
+
+                        <input class="send" type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="signUp-termsCondition">
+                    <span>By signing up to out newsletter you agree to our
+                        <a href="#">Terms Of Services </a> and <a href="#">Privacy Policy </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footerContainer">
+
+        <div class="socialMedia">
+            <div class="navcon">
+                <!-- img -->
+
+                <img src="pen-nib-svgrepo-com.svg" height="40px" alt="">
+                <span>
+                    <h2>
+                        StudySync
+                    </h2>
+                </span>
+            </div>
+
+            <div class="socialMedia-Content">
+                <span> Seamless Learning for Brighter Futures.</span>
+            </div>
+
+            <div class="socialMEdia-Handles">
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fi fi-brands-discord"></i></a>
+
+
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fi fi-brands-instagram"></i></a>
+
+
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fi fi-brands-linkedin"></i></a>
+
+
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fi fi-brands-github"></i></a>
+
+
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fi fi-brands-youtube"></i></a>
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+
+
+
+
+            <div class="products">
+                <div class="footerHeader">
+                    <span>Products</span>
+                </div>
+                <ul class="footerList">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer"> Overview</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Solutions</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Customers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="company">
+                <div class="footerHeader">
+                    <span>Company</span>
+                </div>
+                <ul class="footerList">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">About</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Invester Relation</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Press</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="support ">
+                <div class="footerHeader">
+                    <span>Support </span>
+                </div>
+                <ul class="footerList">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Contact</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Chat</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">FNQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="legal">
+                <div class="footerHeader">
+                    <span>Legal</span>
+                </div>
+                <ul class="footerList">
+
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Cookie Setting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- left or uske neeche waale trusted by the best waala left to right karke aa rha hai , means transition quite quickly  -->
